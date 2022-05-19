@@ -4,7 +4,6 @@ local config = require("history-ignore.config")
 
 local function clean(ignore_words)
 	for index, value in ipairs(ignore_words) do
-		print(value)
 		vim.fn.histdel(":", value)
 	end
 end
