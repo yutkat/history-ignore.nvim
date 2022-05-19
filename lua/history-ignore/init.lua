@@ -18,7 +18,9 @@ function M.setup(user_conf)
 		group = group_name,
 		pattern = "*",
 		callback = function()
-			clean(c.ignore_words)
+			vim.schedule(function()
+				clean(c.ignore_words)
+			end)
 		end,
 		once = false,
 	})
