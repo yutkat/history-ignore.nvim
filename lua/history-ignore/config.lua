@@ -21,6 +21,9 @@ local config = {
 }
 
 function M.set(user_conf)
+	if user_conf == nil then
+		return config
+	end
 	if type(user_conf) ~= "table" then
 		error("Configuration error")
 	end
